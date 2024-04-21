@@ -1,2 +1,5 @@
 export {default as signUpWithEmail} from './signUpWithEmail'
 export {default as signInWithEmail} from './signInWithEmail'
+export {default as signInWithApple} from './signInWithApple'
+export {default as signInWithGoogle} from './signInWithGoogle'
+export {default as signInWithCredential} from './signInWithCredential'

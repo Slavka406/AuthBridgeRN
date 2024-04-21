@@ -11,20 +11,20 @@ const AppStackNavigator = () => {
   const webviewRef = useRef(null)
   const {_user} = useUserAuthContext()
 
-  const [isWebAutorized, setIsWebAutorized] = useState(false)
+  const [isWebAuthorized, setIsWebAuthorized] = useState(false)
 
   useEffect(() => {
-    const checkIsWebAutorized = async () => {
+    const checkIsWebAuthorized = async () => {
       const data = {isCheckAuth: true}
       const script = `window.postMessage(${JSON.stringify(data)}, "*"); true;`
       if (webviewRef.current) webviewRef.current.injectJavaScript(script)
-      setIsWebAutorized(true)
+      setIsWebAuthorized(true)
     }
 
-    if (!isWebAutorized && webviewRef.current) {
-      setTimeout(() => checkIsWebAutorized(), 200)
+    if (!isWebAuthorized && webviewRef.current) {
+      setTimeout(() => checkIsWebAuthorized(), 200)
     }
-  }, [isWebAutorized])
+  }, [isWebAuthorized])
 
   const signOut = async () => {
     const data = {signOut: true}
@@ -63,7 +63,9 @@ const AppStackNavigator = () => {
         }}>
         <WebView
           ref={webviewRef}
-          source={{uri: 'http://192.168.1.234:3000'}}
+          source={{
+            uri: 'https://webview-b5158.web.app' || 'http://192.168.1.234:3000',
+          }}
           onMessage={async event => await getMessageFromWeb(event)}
         />
       </View>

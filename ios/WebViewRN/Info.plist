@@ -20,6 +20,17 @@
 	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.306919167987-aks05nh34r6f9s9nkkhha5o0da44n2iu</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
@@ -31,7 +42,7 @@
 		<key>NSAllowsLocalNetworking</key>
 		<true/>
 	</dict>
-  <key>NSCameraUsageDescription</key>
+	<key>NSCameraUsageDescription</key>
 	<string>Access to the camera allows you to take photos for your profile or tips.</string>
 	<key>NSFaceIDUsageDescription</key>
 	<string>Turning on  FaceID access to allows you quick and secure access to application.</string>
